@@ -8,13 +8,15 @@ import { NavbarModule } from './navbar/navbar.module';
 import { LoginComponent } from './login/login.component';
 import { BodyComponent } from './body/body.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SeriesGridComponent } from './series-grid/series-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    BodyComponent
+    BodyComponent,
+    SeriesGridComponent
   ],
   imports: [
     BrowserModule,

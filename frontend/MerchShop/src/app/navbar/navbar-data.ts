@@ -14,5 +14,10 @@ export const navbarData = [
     icon: 'fal fa-cash-register',
     label: 'Cart'
     },
+    {
+    routeLink: 'user',
+    icon: 'fal fa-user',
+    label: 'Account'
+    },
     
 ];
