@@ -9,6 +9,9 @@ import { LoginComponent } from './login/login.component';
 import { BodyComponent } from './body/body.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SeriesGridComponent } from './series-grid/series-grid.component';
+import { ProductsComponent } from './products/products.component';
+import { CartComponent } from './cart/cart.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { SeriesGridComponent } from './series-grid/series-grid.component';
     NavbarComponent,
     LoginComponent,
     BodyComponent,
-    SeriesGridComponent
+    SeriesGridComponent,
+    ProductsComponent,
+    CartComponent,
+    UserPanelComponent
   ],
   imports: [
     BrowserModule,

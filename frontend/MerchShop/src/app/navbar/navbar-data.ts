@@ -1,10 +1,5 @@
 export const navbarData = [
     {
-    routeLink: '',
-    icon: 'fal fa-tv-retro',
-    label: 'Shows'
-    },
-    {
     routeLink: 'products',
     icon: 'fal fa-tshirt',
     label: 'Products'
