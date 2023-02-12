@@ -1,0 +1,45 @@
+<div class="page">
+    <h2>Choose the product</h2>
+    <div class="buttons">
+        <nav>
+            <ul>
+              <li (click)="showTshirt()">
+                tshirt
+                <span></span><span></span><span></span><span></span>
+              </li>
+            </ul>
+            <ul>
+              <li (click)="showHoodie()">
+                hoodie
+                <span></span><span></span><span></span><span></span>
+              </li>
+            </ul>
+            <ul>
+              <li (click)="showNotebook()" >
+                notebook
+                <span></span><span></span><span></span><span></span>
+              </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    
+    <div class="parent">
+        <img class="image" src="{{product?.imageURL}}">
+        <img id="notebook" src="../../assets/products/notebook.png">
+        <img id="hoodie" src="../../assets/products/hoodie.png">
+        <img id="tshirt" src="../../assets/products/tshirt.png">
+    </div>
+
+    <nav class="cart">
+        <ul>
+          <li (click)="showTshirt()">
+            Add to cart
+            <span></span><span></span><span></span><span></span>
+          </li>
+        </ul>
+    </nav>
+
+</div>

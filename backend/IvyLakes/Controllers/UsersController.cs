@@ -3,6 +3,8 @@ using IvyLakes.DTOs;
 using IvyLakes.IRepositories;
 using IvyLakes.Models;
 using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -19,6 +21,7 @@ namespace IvyLakes.Controllers
         {
             _userRepo = userRepo;
         }
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [EnableQuery]
         [HttpGet("api/users")]
         public async Task<IActionResult> Get()

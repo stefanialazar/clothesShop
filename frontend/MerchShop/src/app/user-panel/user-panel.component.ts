@@ -12,6 +12,7 @@ import { getUTCdate } from '../core/helpers/dateHelpers';
 export class UserPanelComponent implements OnInit {
 
   user: any;
+  userId: string = '';
   userOrders: any;
   displayedColumns: string[] = ['id','date', 'value', 'pointsValue'];
   constructor(private reqS: RequestService) { }
@@ -20,14 +21,8 @@ export class UserPanelComponent implements OnInit {
     const token: any= localStorage.getItem("jwt");
     if(token){
       const tokenObject = this.decodeToken(token);
-      var userId = tokenObject.id;
+      this.userId = tokenObject.id;
     }
-    this.reqS.get('https://localhost:44302/api/users/' + userId).subscribe((data: any) => {
-      this.user = data;
-    })
-    this.reqS.get('https://localhost:44302/api/orders/getOrdersFromUser/' + userId).subscribe((data: any) => {
-      this.userOrders = data;
-    })
   }
   decodeToken(token: string): any {
     try {

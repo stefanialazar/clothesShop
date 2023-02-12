@@ -1,3 +1,11 @@
+.page{
+    margin-left: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color : #182d28;
+    font-family: Lora;
+}
+
 .button-24 {
     background: #fc6f85;
     border: 1px solid #fff;
@@ -8,7 +16,7 @@
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+
     font-size: 16px;
     font-weight: 800;
     line-height: 16px;
@@ -42,10 +50,8 @@
     text-align: center;
 }
 .box {
-    position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
     background-color: #fc6f85;
     border-radius: 3px;
     padding: 70px 100px;

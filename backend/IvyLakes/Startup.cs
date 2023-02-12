@@ -39,7 +39,38 @@ namespace IvyLakes
                     options.UseSqlServer(Configuration.GetConnectionString("MerchShopContext")));
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Merch Shop API", Version = "v1" });
+                c.MapType<TimeSpan>(() => new OpenApiSchema { Type = "string", Format = "time-span" });
+                c.SwaggerDoc("v1",
+                          new OpenApiInfo
+                          {
+                              Title = "RACloud API",
+                              Version = "v1",
+                              Description = "RACloud Backend"
+                          });
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+                {
+                    Description = "JWT Authorization header using the bearer scheme",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+          {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[]{ }
+                    }
+          });
             });
             services.AddControllers();
             services.AddScoped<IUserRepository, UserRepository>();
@@ -53,12 +84,11 @@ namespace IvyLakes
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
-                    ValidateAudience = true,
+                    ValidateAudience = false,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
 
                     ValidIssuer = "https://localhost:44341/",
-                    ValidAudience = "http://localhost:4200/",
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("cocolino07012023"))
 
                 };

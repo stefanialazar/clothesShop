@@ -1,9 +1,13 @@
-<div class="container">
+<div class="page">
 
-    <!-- <div class="gallery-container" fxLayout="row wrap" fxLayoutAlign="center center">
-        <div *ngFor="let image of images" class="gallery-item" fxFlex="20%">
-          <img [src]="image.src" alt="{{image.alt}}">
-        </div>
-      </div>
-     -->
+  <h1>Click on the image to choose your merch</h1>
+
+  <div class="container">
+    <ul class="image-gallery">
+      <li *ngFor="let product of images" [routerLink]="['/products', product.imageID]">
+        <img src="{{product.imageURL}}" alt="???" >
+        <div class="overlay"><span class="fa fa-plus"></span></div>
+      </li>
+    </ul>
+  </div>
 </div>
