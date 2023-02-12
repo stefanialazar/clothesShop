@@ -6,54 +6,23 @@
     font-family: Lora;
 }
 
-.button-24 {
-    background: #fc6f85;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-    box-sizing: border-box;
-    margin-top: 30px;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 16px;
-    min-height: 40px;
-    outline: 0;
-    padding: 12px 14px;
-    text-align: center;
-    text-rendering: geometricprecision;
-    text-transform: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: middle;
-}
-.button-24:hover, .button-24:active {
-    background-color: #fff;
-    background-position: 0 0;
-    color: black;
-    border: 1px solid black;
-}
-.button-24:active {
-    opacity: 0.5;
-}
 .text-center {
-    color: white;
     text-transform: uppercase;
     font-size: 23px;
     margin: -50px 0 80px 0;
-    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
     display: block;
     text-align: center;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
 }
 .box {
     left: 50%;
     top: 50%;
-    background-color: #fc6f85;
-    border-radius: 3px;
+    background-color: #bec5b3;
+    border-radius: 25px;
     padding: 70px 100px;
 }
 .input-container {
@@ -64,10 +33,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    font-size: 16px;
-    color: white;
-    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
-    pointer-event: none;
+    font-size: 20px;
     transition: all 0.5s ease-in-out;
 }
 .input-container input {
@@ -75,30 +41,20 @@
     border-bottom: 1px solid white;
     background: transparent;
     width: 100%;
-    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
     padding: 8px 0 5px 0;
     font-size: 16px;
-    color: #fff;
 }
 .input-container input:focus {
     border: none;
     outline: none;
-    border-bottom: 1px solid #e74c3c;
+    border-bottom: 1px solid #571109;
 }
-.btn {
-    color: #fff;
-    background-color: #e74c3c;
-    outline: none;
-    border: 0;
-    color: #fff;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    margin-top: 50px;
-    border-radius: 2px;
-    cursor: pointer;
-    position: relative;
-}
+
 .input-container input:focus ~ label, .input-container input:valid ~ label {
-    top: -12px;
-    font-size: 12px;
+    top: -25px;
+    font-size: 15px;
 }
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+ }

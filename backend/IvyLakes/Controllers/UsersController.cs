@@ -21,6 +21,7 @@ namespace IvyLakes.Controllers
         {
             _userRepo = userRepo;
         }
+
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [EnableQuery]
         [HttpGet("api/users")]
@@ -29,6 +30,7 @@ namespace IvyLakes.Controllers
             var users = await _userRepo.GetUsers();
             return Ok(users);
         }
+
         [EnableQuery]
         [HttpPost("api/users")]
         public async Task<IActionResult> AddUser([FromBody] RegisterDTO registerDto)

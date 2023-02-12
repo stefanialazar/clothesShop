@@ -7,8 +7,6 @@ using Microsoft.AspNet.OData;
 using System.Threading.Tasks;
 using IvyLakes.Data;
 using IvyLakes.DTOs;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace IvyLakes.Controllers { 
 
@@ -21,7 +19,6 @@ namespace IvyLakes.Controllers {
             _context = context;
         }
 
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [EnableQuery]
         [HttpGet("api/images")]
         public async Task<IActionResult> Get()

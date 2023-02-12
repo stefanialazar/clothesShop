@@ -5,6 +5,11 @@
     color : #182d28;
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
 * {
     box-sizing: border-box;
   }

@@ -43,9 +43,9 @@ namespace IvyLakes
                 c.SwaggerDoc("v1",
                           new OpenApiInfo
                           {
-                              Title = "RACloud API",
+                              Title = "MerchShop API",
                               Version = "v1",
-                              Description = "RACloud Backend"
+                              Description = "MerchShop Backend"
                           });
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()

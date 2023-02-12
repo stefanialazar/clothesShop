@@ -29,8 +29,7 @@ export class LoginComponent implements OnInit {
     this.loginService.loginUser(obj).subscribe((res: any) => {
       const token = res.token;
       localStorage.setItem("jwt", token);
-      //this.router.navigate(['products']);
-      window.location.href = 'http://localhost:4200/products';
+      this.router.navigate(['/products']);
     });
 
   }
